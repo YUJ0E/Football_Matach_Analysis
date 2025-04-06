@@ -25,10 +25,10 @@ To run this project, you need to have the following requirements installed:
 - `player_ball_assigner`: This module is used to assign ball possession. The core logic is to determine which team the player closest to the football in this frame belongs to.
 - `speed_and_distance_estimator`: This module calculates the running distance and real-time speed.
 - `stubs`: This folder stores previously run data to avoid repeated execution. This is not mandatory.
-- `team_assigner`: This module assigns players to teams. It first takes the upper part of the bounding box detected by YOLO to avoid color recognition interference from pants, then determines the team based on the color of the jersey. A special case is the goalkeeper, who may not wear the same color as other players on the team. In such cases, the team is assigned based on the goalkeeper's ID.
+- `team_assigner`: This module assigns players to teams. It first takes the upper part of the bounding box detected by YOLO to avoid color recognition interference from pants, then determines the team based on the color of the jersey. A special case is the goalkeeper, who may not wear the same color as other players on the team. In such cases, the team is assigned based on the goalkeeper's ID.s
 - `trackers`: This module uses YOLO for object detection. Subsequent image post-processing, including marking players and displaying ball possession rates on the video, is done here.
 - `view_transformer`: This module performs perspective transformation. It calculates the transformation matrix using the pixel coordinates of the four standard penalty areas in a frame with a regular focal length (the focal length used most frequently in the video) and their actual coordinates. Since the focal length changes little throughout the video, its impact is ignored.
-![transformed frame](input_video/transformer.png)
+![transformed frame](input_videos/transformer.png)
 
 ## Usage
 
